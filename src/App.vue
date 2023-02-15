@@ -10,13 +10,14 @@ import ClickExample from './components/ClickExample.vue';
     <nav>
       <RouterLink to="/"> Home</RouterLink> |
       <RouterLink to="/Pokemons"> Pokemons</RouterLink> |
+      <RouterLink to="/Favoritos"> Favs</RouterLink> |
       <RouterLink to="/About"> About</RouterLink>
     </nav>
   </header>
+  <RouterView />
   <MainFetchingPosts />
   Inicio
   <MainCounter />
-  <RouterView />
   <MainComponent />
   <ClickExample />
   Final
@@ -25,5 +26,8 @@ import ClickExample from './components/ClickExample.vue';
 <style scoped>
   a {
     color: white;
+  }
+  a[aria-current='page'] {
+    color: #f3ef02;
   }
 </style>

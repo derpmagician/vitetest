@@ -1,9 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  linkActiveClass: 'active',
+  // linkActiveClass: 'active',
+  ariaCurrentValue: 'page',
   routes: [
     {
       path: '/',
@@ -19,6 +20,11 @@ const router = createRouter({
       path: '/pokemons/:name',
       name: 'pokemon',
       component: () => import('../views/PokemonView.vue')
+    },
+    {
+      path: '/favoritos/',
+      name: 'favoritos',
+      component: () => import('../views/FavoritosView.vue')
     },
     {
       path: '/about',
