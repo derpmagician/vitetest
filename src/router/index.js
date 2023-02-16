@@ -27,6 +27,11 @@ const router = createRouter({
       component: () => import('../views/FavoritosView.vue')
     },
     {
+      path: '/random/',
+      name: 'random',
+      component: () => import('../views/RandomView.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

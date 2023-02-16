@@ -1,18 +1,14 @@
 <script setup>
-import { useCounterStore } from '@/stores/counter'
-import { storeToRefs } from 'pinia'
-import TheWelcome from '../components/TheWelcome.vue'
 
-const useCounter = useCounterStore();
-const { increment } = useCounter;
-const { count, doubleCount } = storeToRefs(useCounter);
+import MainFetchingPosts from '../components/MainFetchingPosts.vue';
+// import TheWelcome from '../components/TheWelcome.vue'
+
+
 </script>
 
 <template>
   <main>
-    <p>Home Counter: {{ count }}</p>
-    <p>Double Counter: {{ doubleCount }}</p>
-    <button @click="increment">Incrementar</button>
-    <TheWelcome />
+    <MainFetchingPosts />
+    <MainComponent />
   </main>
 </template>

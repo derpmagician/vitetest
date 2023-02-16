@@ -36,8 +36,6 @@ onMounted(async () => {
 </script>
 <template>
   <div class="posts">
-    <button @click="prev">Prev pa borrar</button>
-    <button @click="next">Next pa borrar</button>
     <h2>Mi Post Favorito: {{ favorito || "Sin Favorito" }}</h2>
     <PaginatePost @prev="prev" @next="next"
       :inicio="inicio" :fin="fin" :maxLength="maxLength" />

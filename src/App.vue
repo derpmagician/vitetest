@@ -1,8 +1,6 @@
 <script setup>
-import MainFetchingPosts from './components/MainFetchingPosts.vue';
 import MainComponent from './components/MainComponent.vue';
-import MainCounter from './components/MainCounter.vue';
-import ClickExample from './components/ClickExample.vue';
+
 </script>
 <template>
 <div class="principal">
@@ -11,23 +9,23 @@ import ClickExample from './components/ClickExample.vue';
       <RouterLink to="/"> Home</RouterLink> |
       <RouterLink to="/Pokemons"> Pokemons</RouterLink> |
       <RouterLink to="/Favoritos"> Favs</RouterLink> |
+      <RouterLink to="/Random"> Random</RouterLink> |
       <RouterLink to="/About"> About</RouterLink>
     </nav>
   </header>
   <RouterView />
-  <MainFetchingPosts />
-  Inicio
-  <MainCounter />
-  <MainComponent />
-  <ClickExample />
-  Final
+  
+
 </div>
 </template>
-<style scoped>
+<style>
   a {
     color: white;
   }
   a[aria-current='page'] {
     color: #f3ef02;
+  }
+  button {
+    padding: 0.25rem 0.5rem;
   }
 </style>

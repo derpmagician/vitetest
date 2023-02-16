@@ -41,16 +41,13 @@ const dissableButton = computed(() => {
   <div class="container-template">
     <div class="container-contador">
         <div class="container-contador-botones">
-          <!-- <button class="btn btn-contador" @click="increment()">Aumentar</button>
-          <button class="btn btn-contador" @click="decrement()">Disminuir</button>
-          <button class="btn btn-contador" @click="reset()">Resetear</button> -->
           <ButtonCounter texto="Aumentar" @changeCounter="increment" />
           <ButtonCounter texto="Disminuir" @changeCounter="decrement" />
           <ButtonCounter texto="Resetear" @changeCounter="reset" />
 
           <button class="btn btn-contador" @click="addFav()" :disabled="dissableButton">Añadir a lista</button>
         </div>
-        
+
         <div class="container-contador-pantalla">
           <div class="contador" :class="classCounter">
             {{ counter }}
